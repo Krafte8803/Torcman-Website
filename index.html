@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torcman – High-End Antriebssysteme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff5722;
+    }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-motor.png') center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      background: #f0f0f0;
+    }
+
+    .product-card h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .product-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #ff5722;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Torcman</h1>
+    <nav>
+      <a href="#produkte">Produkte</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Effizienz. Präzision. Leistung.</h2>
+    <p>Wir entwickeln und fertigen High-End Antriebssysteme für den Modellflug auf höchstem Niveau.</p>
+  </div>
+
+  <section id="produkte">
+    <h3>Unsere Produkte</h3>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="antriebe.png" alt="Antriebe">
+        <h4>Antriebe</h4>
+        <p>Leistungsstarke Außenläufer-Motoren für höchste Effizienz und Qualität im Modellflug.</p>
+        <a href="#">Mehr erfahren</a>
+      </div>
+      <div class="product-card">
+        <img src="fahrwerke.png" alt="Fahrwerke">
+        <h4>Fahrwerke</h4>
+        <p>Präzise gefertigte Einziehfahrwerke für elegante Starts und sichere Landungen.</p>
+        <a href="#">Mehr erfahren</a>
+      </div>
+      <div class="product-card">
+        <img src="fes-ex-system.png" alt="FES-Ex System">
+        <h4>FES-Ex System</h4>
+        <p>Das FES-Ex System – innovative Front-Elektro-Startlösungen für Segelflugmodelle.</p>
+        <a href="#">Mehr erfahren</a>
+      </div>
+      <div class="product-card">
+        <img src="zubehoer.png" alt="Zubehör">
+        <h4>Zubehör</h4>
+        <p>Passgenaues Zubehör – von Luftschrauben bis Spezialkabeln, alles aus einer Hand.</p>
+        <a href="#">Mehr erfahren</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber-uns">
+    <h3>Über Torcman</h3>
+    <p>[Hier steht ein kurzer Text über die Geschichte, Werte und Expertise des Unternehmens]</p>
+  </section>
+
+  <section id="kontakt">
+    <h3>Kontakt</h3>
+    <p>
+      Torcman GmbH<br>
+      Riedweg 25<br>
+      D-89081 Ulm – Söflingen<br><br>
+      Telefon: +49 731 379 905 70<br>
+      Hotline: Montag bis Freitag von 8 – 12 Uhr<br>
+      E-Mail: <a href="mailto:mail@torcman.de">mail@torcman.de</a><br>
+      Website: <a href="https://www.torcman.de">www.torcman.de</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Torcman GmbH – Alle Rechte vorbehalten.
+  </footer>
+</body>
+</html>
