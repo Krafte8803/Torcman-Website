@@ -8,28 +8,54 @@
 
   /* Variablen für Carousel */
   --card-w: 220px;    /* Karten-Breite */
-  --ovl:    70px;     /* Überlappung */
-  --speed: 12s;       /* Durchlauf-Dauer */
+  --ovl:    50px;     /* Überlappung */
+  --speed: 20s;       /* Durchlauf-Dauer */
 }
 
 /* 2. Webfonts */
 @font-face {
-  font-family: 'Microgramma';
-  src: url('fonts/Microgramma-BoldExtended.woff2') format('woff2');
-  font-weight: 700;
-}
-@font-face {
   font-family: 'DIN Pro';
-  src: url('fonts/DINPro-Regular.woff2') format('woff2'),
-       url('fonts/DINPro-Regular.otf') format('opentype');
+  src: url('fonts/dinpro-webfont.woff2') format('woff2'),
+       url('fonts/dinpro-webfont.woff')  format('woff'),
+       url('fonts/DINPro.otf')          format('opentype');
   font-weight: 400;
+  font-style: normal;
 }
 @font-face {
   font-family: 'DIN Pro';
-  src: url('fonts/DINPro-Bold.woff2') format('woff2'),
-       url('fonts/DINPro-Bold.otf') format('opentype');
-  font-weight: 700;
+  src: url('fonts/dinpro-medium-webfont.woff2') format('woff2'),
+       url('fonts/dinpro-medium-webfont.woff')  format('woff'),
+       url('fonts/DINPro-Medium.otf')          format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('fonts/dinpro-bold-webfont.woff2') format('woff2'),
+       url('fonts/dinpro-bold-webfont.woff')  format('woff'),
+       url('fonts/DINPro-Bold.otf')           format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Microgramma';
+  src: url('fonts/microgrammaefop-boldext-webfont.woff2') format('woff2'),
+       url('fonts/microgrammaefop-boldext-webfont.woff')  format('woff'),
+       url('fonts/MicrogrammaEFOP-BoldExt.otf')           format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eurostile Candy';
+  src: url('fonts/eurostilecandylntpro-regular-webfont.woff2') format('woff2'),
+       url('fonts/eurostilecandylntpro-regular-webfont.woff')  format('woff'),
+       url('fonts/EurostileCandyLTPro-Regular.otf')           format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* 3. Reset & Basis */
 * {
