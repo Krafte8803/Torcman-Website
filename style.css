@@ -167,12 +167,16 @@ section h2 {
 }
 .product-carousel .carousel-track {
   display: flex;
-  gap: -150px;                /* Überlappungsabstand */
-  animation: scrollCards 30s linear infinite;
+  gap: -250px;                /* Überlappungsabstand */
+  animation: scrollCards 20s linear infinite;
   animation-play-state: running;
 }
 .product-carousel .carousel-track:hover {
   animation-play-state: paused;
+}
+@keyframes scrollCards {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .product-card {
   flex: 0 0 auto;
