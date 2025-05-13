@@ -5,6 +5,11 @@
   --darkgrey:  #1A1A1A;
   --lightgrey: #CCCCCC;
   --orange:    #FFA200;
+
+  /* Variablen für Carousel */
+  --card-w: 220px;    /* Karten-Breite */
+  --ovl:    70px;     /* Überlappung */
+  --speed: 12s;       /* Durchlauf-Dauer */
 }
 
 /* 2. Webfonts */
@@ -74,7 +79,7 @@ nav a:hover {
   color: var(--white);
 }
 .hero.slideshow {
-  display: block; /* kein Flex, damit Slides und Inhalt nicht nebeneinander liegen */
+  display: block;
 }
 .hero.slideshow .slides {
   position: absolute;
@@ -145,21 +150,20 @@ section h2 {
 .product-carousel {
   position: relative;
   margin: 4rem auto;
-  max-width: 1000px;
-  overflow: hidden; /* verhindert Scrollbars */
+  max-width: calc(var(--card-w) * 3); /* Zeigt 3 Karten gleichzeitig */
+  overflow: hidden;
 }
 .product-carousel .carousel-track {
   display: flex;
-  gap: -150px; /* Überlappung */
-  animation: scrollCards 30s linear infinite;
-  animation-play-state: running;
+  animation: slide var(--speed) linear infinite;
 }
 .product-carousel .carousel-track:hover {
   animation-play-state: paused;
 }
-.product-card {
+.product-carousel .product-card {
+  width: var(--card-w);
   flex: 0 0 auto;
-  padding-right: 20px;
+  margin-left: calc(-1 * var(--ovl));
   background: var(--white);
   border: 1px solid var(--lightgrey);
   border-radius: 6px;
@@ -167,8 +171,11 @@ section h2 {
   transition: transform 0.3s;
   text-align: center;
 }
-.product-card:hover {
-  transform: translateY(-5px);
+.product-carousel .product-card:first-child {
+  margin-left: 0;
+}
+.product-carousel .product-card:hover {
+  transform: translateY(-6px);
 }
 .product-card img {
   width: 100%;
@@ -210,22 +217,23 @@ section h2 {
   z-index: 10;
   opacity: 1;
 }
-.product-carousel .carousel-btn:hover {
-  opacity: 0.8;
-}
-.product-carousel .prev {
+.product-carousel .carousel-btn.prev {
   left: 0.5rem;
 }
-.product-carousel .next {
+.product-carousel .carousel-btn.next {
   right: 0.5rem;
 }
-@keyframes scrollCards {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * (var(--card-w) - var(--ovl)) * 5));
+  }
 }
 @media (max-width: 700px) {
   .product-card {
-    flex: 0 0 80%;
+    flex: 0 0 calc(var(--card-w) * 0.8);
   }
 }
 
