@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -23,7 +22,6 @@
       <img src="images/slide1.png" class="slide active" alt="">
       <img src="images/slide2.png" class="slide" alt="">
       <img src="images/slide3.png" class="slide" alt="">
-
     </div>
     <div class="hero-content">
       <h1>Effizienz. Präzision. Leistung.</h1>
@@ -34,7 +32,6 @@
       <button class="next">&rarr;</button>
     </div>
   </section>
-  
 
   <section id="produkte" class="product-carousel">
     <button class="carousel-btn prev" aria-label="Zurück">‹</button>
@@ -66,7 +63,6 @@
     </div>
     <button class="carousel-btn next" aria-label="Weiter">›</button>
   </section>
-  
 
   <section id="ueber-uns">
     <h2>Über Torcman</h2>
@@ -92,36 +88,34 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.hero.slideshow .slide');
-  const next = document.querySelector('.slideshow-nav .next');
-  const prev = document.querySelector('.slideshow-nav .prev');
-  let current = 0;
+      const slides = document.querySelectorAll('.hero.slideshow .slide');
+      const next = document.querySelector('.slideshow-nav .next');
+      const prev = document.querySelector('.slideshow-nav .prev');
+      let current = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+
+      function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+
+      function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      }
+
+      next.addEventListener('click', nextSlide);
+      prev.addEventListener('click', prevSlide);
+
+      showSlide(current);
+      setInterval(nextSlide, 5000);
     });
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
-
-  function prevSlide() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  }
-
-  next.addEventListener('click', nextSlide);
-  prev.addEventListener('click', prevSlide);
-
-  showSlide(current);
-  setInterval(nextSlide, 5000); // change every 5s
-});
-
   </script>
-  
 
 </body>
 </html>
