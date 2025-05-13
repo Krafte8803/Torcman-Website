@@ -292,3 +292,39 @@ footer a {
   color: var(--orange);
   text-decoration: none;
 }
+
+/* → Karten überlappen und horizontal scrollen ← */
+.product-carousel .carousel-track {
+  display: flex;
+  /* negativen Margin nutzen, damit sich die Karten überlappen */
+  gap: -150px;
+  /* endlos scrollen */
+  animation: scrollCards 30s linear infinite;
+  /* bei Hover anhalten */
+  animation-play-state: running;
+}
+.product-carousel .carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* Überlappung optisch stacken */
+.product-card {
+  flex: 0 0 auto;
+  /* Optional: innerer Rand, um Text nicht direkt an Nachbarkarte */
+  padding-right: 20px;
+}
+
+/* Keyframes für das langsame Scrollen */
+@keyframes scrollCards {
+  from   { transform: translateX(0); }
+  to     { transform: translateX(-50%); } /* 50% der Track-Breite */
+}
+
+/* Pfeile bleiben sichtbar und klickbar */
+.product-carousel .carousel-btn {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.product-carousel .carousel-btn:hover {
+  opacity: 0.8;
+}
