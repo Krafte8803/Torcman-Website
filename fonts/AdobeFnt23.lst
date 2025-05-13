@@ -1,0 +1,139 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/brunowerndl/Desktop/TORCMAN_CI_Handbuch Ordner/Document fonts/AdobeFnt23.lst
+FileLength:2943
+FileModTime:715021350
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DINPro-Bold
+FamilyName:DIN Pro
+StyleName:Bold
+MenuName:DINPro-Bold
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:DINPro-Bold
+WritingScript:Roman
+OutlineFileName:/Users/brunowerndl/Desktop/TORCMAN_CI_Handbuch Ordner/Document fonts/DINPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:105240
+FileModTime:372601784
+NameArray:0,Mac,4,DINPro-Bold
+NameArray:0,Win,1,DINPro-Bold
+NameArray:0,Win,16,DIN Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DINPro-Medium
+FamilyName:DIN Pro
+StyleName:Medium
+MenuName:DINPro-Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:DINPro-Medium
+WritingScript:Roman
+OutlineFileName:/Users/brunowerndl/Desktop/TORCMAN_CI_Handbuch Ordner/Document fonts/DINPro-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:104856
+FileModTime:372601784
+NameArray:0,Mac,4,DINPro-Medium
+NameArray:0,Win,1,DINPro-Medium
+NameArray:0,Win,16,DIN Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DINPro
+FamilyName:DIN Pro
+StyleName:Regular
+MenuName:DINPro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:DINPro
+WritingScript:Roman
+OutlineFileName:/Users/brunowerndl/Desktop/TORCMAN_CI_Handbuch Ordner/Document fonts/DINPro.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:103688
+FileModTime:372601786
+NameArray:0,Mac,4,DINPro
+NameArray:0,Win,1,DINPro
+NameArray:0,Win,16,DIN Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:EurostileCandyLTPro-Regular
+FamilyName:Eurostile Candy LT Pro
+StyleName:Regular
+MenuName:Eurostile Candy LT Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Eurostile Candy LT Pro
+WritingScript:Roman
+OutlineFileName:/Users/brunowerndl/Desktop/TORCMAN_CI_Handbuch Ordner/Document fonts/EurostileCandyLTPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:59792
+FileModTime:646731842
+NameArray:0,Mac,4,Eurostile Candy LT Pro
+NameArray:0,Win,1,Eurostile Candy LT Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MicrogrammaEFOP-BoldExt
+FamilyName:MicrogrammaEFOP-BoldExt
+StyleName:Regular
+MenuName:MicrogrammaEFOP-BoldExt
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:MicrogrammaEFOP-BoldExt
+WritingScript:Roman
+OutlineFileName:/Users/brunowerndl/Desktop/TORCMAN_CI_Handbuch Ordner/Document fonts/MicrogrammaEFOP-BoldExt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:23484
+FileModTime:644761162
+NameArray:0,Mac,4,MicrogrammaEFOP-BoldExt
+NameArray:0,Win,1,MicrogrammaEFOP-BoldExt
+%EndFont
+
