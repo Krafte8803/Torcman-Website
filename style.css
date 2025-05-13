@@ -221,4 +221,50 @@
     color: var(--orange);
     text-decoration: none;
   }
+  /* Carousel-Track */
+.product-carousel {
+    position: relative;
+    margin: 4rem auto;
+    max-width: 1000px;
+  }
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  .product-card {
+    flex: 0 0 45%; /* etwa 2 Karten nebeneinander */
+    scroll-snap-align: start;
+  }
+  
+  /* Buttons */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+  }
+  .carousel-btn:hover { opacity: 1; }
+  .product-carousel .prev { left: 0.5rem; }
+  .product-carousel .next { right: 0.5rem; }
+  
+  /* Responsive: eine Karte mobil */
+  @media (max-width: 700px) {
+    .product-card { flex: 0 0 80%; }
+  }
   

@@ -35,19 +35,19 @@
   </section>
   
 
-  <section id="produkte">
-    <h2>Unsere Produkte</h2>
-    <div class="product-grid">
+  <section id="produkte" class="product-carousel">
+    <button class="carousel-btn prev" aria-label="Zurück">‹</button>
+    <div class="carousel-track">
       <div class="product-card">
         <img src="images/antriebe.png" alt="Antriebe">
         <h3>Antriebe</h3>
-        <p>Leistungsstarke Außenläufer-Motoren für höchste Effizienz und Qualität im Modellflug.</p>
+        <p>Leistungsstarke Außenläufer-Motoren für höchste Effizienz.</p>
         <a href="#" class="btn">Mehr erfahren</a>
       </div>
       <div class="product-card">
         <img src="images/fahrwerke.png" alt="Fahrwerke">
         <h3>Fahrwerke</h3>
-        <p>Präzise gefertigte Einziehfahrwerke für elegante Starts und sichere Landungen.</p>
+        <p>Präzise gefertigte Einziehfahrwerke für elegante Starts.</p>
         <a href="#" class="btn">Mehr erfahren</a>
       </div>
       <div class="product-card">
@@ -59,11 +59,13 @@
       <div class="product-card">
         <img src="images/zubehoer.png" alt="Zubehör">
         <h3>Zubehör</h3>
-        <p>Passgenaues Zubehör – von Luftschrauben bis Spezialkabeln, alles aus einer Hand.</p>
+        <p>Passgenaues Zubehör – von Luftschrauben bis Spezialkabeln.</p>
         <a href="#" class="btn">Mehr erfahren</a>
       </div>
     </div>
+    <button class="carousel-btn next" aria-label="Weiter">›</button>
   </section>
+  
 
   <section id="ueber-uns">
     <h2>Über Torcman</h2>
@@ -86,6 +88,19 @@
   <footer>
     &copy; 2025 Torcman GmbH – Alle Rechte vorbehalten.
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.carousel-track');
+      document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+        track.scrollBy({ left: track.offsetWidth * 0.45 + 24, behavior: 'smooth' });
+      });
+      document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+        track.scrollBy({ left: - (track.offsetWidth * 0.45 + 24), behavior: 'smooth' });
+      });
+    });
+  </script>
+  
 
 </body>
 </html>
