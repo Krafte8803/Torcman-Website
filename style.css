@@ -1,106 +1,88 @@
-/* style.css */
 
-/* 1. CI-Farben :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
+/* 1. CI-Farben */
 :root {
-    --white:     #FFFFFF;
-    --darkgrey:  #1A1A1A; /* Pantone Cool Grey 11 / 90% Schwarz :contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3} */
-    --lightgrey: #CCCCCC; /* Pantone Cool Grey 3 / 20% Schwarz :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5} */
-    --orange:    #FFA200; /* Pantone 1595 / 100Y 60M :contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7} */
-  }
-  
-  /* 2. Webfonts (lokale Files in fonts/) :contentReference[oaicite:8]{index=8}:contentReference[oaicite:9]{index=9} */
-  @font-face {
-    font-family: 'Microgramma';
-    src: url('fonts/Microgramma-BoldExtended.woff2') format('woff2');
-    font-weight: 700; font-style: normal;
-  }
-  @font-face {
-    font-family: 'DIN Pro';
-    src: url('fonts/DINPro-Regular.woff2') format('woff2');
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: 'DIN Pro';
-    src: url('fonts/DINPro-Medium.woff2') format('woff2');
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: 'DIN Pro';
-    src: url('fonts/DINPro-Bold.woff2') format('woff2');
-    font-weight: 700;
-  }
-  
-  /* 3. Reset & Basis */
-  * {
-    box-sizing: border-box;
-    margin: 0; padding: 0;
-  }
-  body {
-    font-family: 'DIN Pro', sans-serif;
-    background: var(--white);
-    color: var(--darkgrey);
-    line-height: 1.6;
-  }
-  
-  /* 4. Header */
-  header {
-    background: var(--white);
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid var(--lightgrey);
-    position: sticky; top: 0; z-index: 100;
-  }
-  header .logo {
-    height: 50px;
-  }
-  nav a {
-    font-family: 'Microgramma', sans-serif;
-    color: var(--darkgrey);
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 700;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: var(--orange);
-  }
-  
-  /* 5. Hero */
-  .hero {
-    height: 80vh;
-    background:
-      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url('images/hero.png') center/cover no-repeat;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 2rem;
-    color: var(--white);
-  }
-  .hero h1,
-  .hero p {
-    font-family: 'Microgramma', sans-serif;
-  }
-  .hero h1 {
-    font-size: 2.5rem; margin-bottom: 0.5rem;
-  }
-  .hero p {
-    font-size: 1.1rem; max-width: 600px;
-  }
-  
-/* Slideshow Hero */
+  --white:     #FFFFFF;
+  --darkgrey:  #1A1A1A;
+  --lightgrey: #CCCCCC;
+  --orange:    #FFA200;
+}
+
+/* 2. Webfonts (lokale Files in fonts/) */
+@font-face {
+  font-family: 'Microgramma';
+  src: url('fonts/Microgramma-BoldExtended.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('fonts/DINPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('fonts/DINPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('fonts/DINPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+/* 3. Reset & Basis */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+body {
+  font-family: 'DIN Pro', sans-serif;
+  background: var(--white);
+  color: var(--darkgrey);
+  line-height: 1.6;
+}
+
+/* 4. Header */
+header {
+  background: var(--white);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--lightgrey);
+  position: sticky; top: 0; z-index: 100;
+}
+header .logo {
+  height: 50px;
+}
+nav a {
+  font-family: 'Microgramma', sans-serif;
+  color: var(--darkgrey);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--orange);
+}
+
+/* 5. Hero Slideshow */
+.hero,
 .hero.slideshow {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
 }
-
 .hero.slideshow .slides {
   position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  z-index: 0;
 }
-
 .hero.slideshow .slide {
   position: absolute;
   width: 100%;
@@ -110,143 +92,134 @@
   transition: opacity 1s ease-in-out;
   z-index: 0;
 }
-
 .hero.slideshow .slide.active {
   opacity: 1;
   z-index: 1;
 }
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 700px;
+}
+.hero h1,
+.hero p {
+  font-family: 'Microgramma', sans-serif;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.1rem;
+}
 
-  
+/* Slideshow Navigation Buttons */
+.slideshow-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.slideshow-nav button {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
-  /* 6. Produkte */
-  section h2 {
-    font-family: 'Microgramma', sans-serif;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-  }
+/* 6. Produkte */
+section h2 {
+  font-family: 'Microgramma', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+@media (max-width: 700px) {
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto 4rem;
+    grid-template-columns: 1fr;
   }
-  @media (max-width: 700px) {
-    .product-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .product-card {
-    background: var(--white);
-    border: 1px solid var(--lightgrey);
-    border-radius: 6px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    text-align: center;
-  }
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  .product-card img {
-    width: 100%; height: 140px; object-fit: cover;
-  }
-  .product-card h3 {
-    font-family: 'Microgramma', sans-serif;
-    margin: 0.75rem 0;
-  }
-  .product-card p {
-    padding: 0 1rem;
-    color: #555;
-    font-size: 0.95rem;
-  }
-  .product-card .btn {
-    display: inline-block;
-    margin: 1rem 0 1.5rem;
-    padding: 0.5rem 1.25rem;
-    background: var(--orange);
-    color: var(--white);
-    font-family: 'Microgramma', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  /* 7. Über uns */
-  #ueber-uns {
-    max-width: 800px;
-    margin: auto 0 4rem;
-    text-align: center;
-  }
-  
-  /* 8. Kontakt & Footer */
-  #kontakt {
-    background: var(--lightgrey);
-    padding: 2rem;
-  }
-  #kontakt h2 {
-    font-family: 'Microgramma', sans-serif;
-    margin-bottom: 1rem;
-  }
-  #kontakt address {
-    font-style: normal;
-    line-height: 1.6;
-  }
-  footer {
-    background: var(--darkgrey);
-    color: var(--white);
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-  }
-  footer a {
-    color: var(--orange);
-    text-decoration: none;
-  }
-  /* Carousel-Track */
-.product-carousel {
-    position: relative;
-    margin: 4rem auto;
-    max-width: 1000px;
-  }
-  .carousel-track {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 1rem 0;
-  }
-  .carousel-track::-webkit-scrollbar {
-    display: none;
-  }
-  .product-card {
-    flex: 0 0 45%; /* etwa 2 Karten nebeneinander */
-    scroll-snap-align: start;
-  }
-  
-  /* Buttons */
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--orange);
-    border: none;
-    color: var(--white);
-    font-size: 2rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    opacity: 0.8;
-  }
-  .carousel-btn:hover { opacity: 1; }
-  .product-carousel .prev { left: 0.5rem; }
-  .product-carousel .next { right: 0.5rem; }
-  
-  /* Responsive: eine Karte mobil */
-  @media (max-width: 700px) {
-    .product-card { flex: 0 0 80%; }
-  }
-  
+}
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--lightgrey);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+  flex: 0 0 45%;
+  scroll-snap-align: start;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.product-card h3 {
+  font-family: 'Microgramma', sans-serif;
+  margin: 0.75rem 0;
+}
+.product-card p {
+  padding: 0 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+.product-card .btn {
+  display: inline-block;
+  margin: 1rem 0 1.5rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--orange);
+  color: var(--white);
+  font-family: 'Microgramma', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* 7. Über uns */
+#ueber-uns {
+  max-width: 800px;
+  margin: auto 0 4rem;
+  text-align: center;
+}
+
+/* 8. Kontakt & Footer */
+#kontakt {
+  background: var(--lightgrey);
+  padding: 2rem;
+}
+#kontakt h2 {
+  font-family: 'Microgramma', sans-serif;
+  margin-bottom: 1rem;
+}
+#kontakt address {
+  font-style: normal;
+  line-height: 1.6;
+}
+footer {
+  background: var(--darkgrey);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: var(--orange);
+  text-decoration: none;
+}
