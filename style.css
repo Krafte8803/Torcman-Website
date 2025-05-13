@@ -1,3 +1,4 @@
+
 /* 1. CI-Farben */
 :root {
   --white:     #FFFFFF;
@@ -6,7 +7,7 @@
   --orange:    #FFA200;
 }
 
-/* 2. Webfonts (lokale Files in fonts/) */
+/* 2. Webfonts */
 @font-face {
   font-family: 'Microgramma';
   src: url('fonts/Microgramma-BoldExtended.woff2') format('woff2');
@@ -14,17 +15,14 @@
 }
 @font-face {
   font-family: 'DIN Pro';
-  src: url('fonts/DINPro-Regular.woff2') format('woff2');
+  src: url('fonts/DINPro-Regular.woff2') format('woff2'),
+       url('fonts/DINPro-Regular.otf') format('opentype');
   font-weight: 400;
 }
 @font-face {
   font-family: 'DIN Pro';
-  src: url('fonts/DINPro-Medium.woff2') format('woff2');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('fonts/DINPro-Bold.woff2') format('woff2');
+  src: url('fonts/DINPro-Bold.woff2') format('woff2'),
+       url('fonts/DINPro-Bold.otf') format('opentype');
   font-weight: 700;
 }
 
@@ -69,44 +67,32 @@ nav a:hover {
 }
 
 /* 5. Hero Slideshow */
-/* Allgemeines Hero-Layout */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
   color: var(--white);
 }
-/* Slideshow-spezifisch: Blocklayout */
 .hero.slideshow {
-  display: block;
+  display: block; /* kein Flex, damit Slides und Inhalt nicht nebeneinander liegen */
 }
-/* Slides Container */
 .hero.slideshow .slides {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
 }
-/* Einzelne Slides */
 .hero.slideshow .slide {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 0;
 }
-/* Aktive Slide */
 .hero.slideshow .slide.active {
   opacity: 1;
   z-index: 1;
 }
-/* Hero-Text Overlay */
 .hero.slideshow .hero-content {
   position: absolute;
   top: 50%;
@@ -130,8 +116,6 @@ nav a:hover {
 .hero p {
   font-size: 1.1rem;
 }
-
-/* Slideshow Navigation Buttons */
 .hero.slideshow .slideshow-nav {
   position: absolute;
   top: 50%;
@@ -151,32 +135,27 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* 6. Produkte (Karussell &) */
+/* 6. Produkte Carousel */
 section h2 {
   font-family: 'Microgramma', sans-serif;
   text-align: center;
   margin-bottom: 1rem;
   font-size: 1.75rem;
 }
-
-/* Carousel-Track mit Überlappung */
 .product-carousel {
   position: relative;
   margin: 4rem auto;
   max-width: 1000px;
+  overflow: hidden; /* verhindert Scrollbars */
 }
 .product-carousel .carousel-track {
   display: flex;
-  gap: -500px;                /* Überlappungsabstand */
-  animation: scrollCards 20s linear infinite;
+  gap: -150px; /* Überlappung */
+  animation: scrollCards 30s linear infinite;
   animation-play-state: running;
 }
 .product-carousel .carousel-track:hover {
   animation-play-state: paused;
-}
-@keyframes scrollCards {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
 .product-card {
   flex: 0 0 auto;
@@ -216,7 +195,7 @@ section h2 {
   text-decoration: none;
   border-radius: 4px;
 }
-.carousel-btn {
+.product-carousel .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -231,7 +210,7 @@ section h2 {
   z-index: 10;
   opacity: 1;
 }
-.carousel-btn:hover {
+.product-carousel .carousel-btn:hover {
   opacity: 0.8;
 }
 .product-carousel .prev {
@@ -240,24 +219,24 @@ section h2 {
 .product-carousel .next {
   right: 0.5rem;
 }
-
 @keyframes scrollCards {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
-
 @media (max-width: 700px) {
   .product-card {
     flex: 0 0 80%;
   }
 }
 
-/* Überlauf und Footer (unverändert) */
+/* 7. Über uns */
 #ueber-uns {
   max-width: 800px;
   margin: auto 0 4rem;
   text-align: center;
 }
+
+/* 8. Kontakt & Footer */
 #kontakt {
   background: var(--lightgrey);
   padding: 2rem;
