@@ -8,7 +8,7 @@
 
   /* Variablen für Carousel */
   --card-w: 220px;    /* Karten-Breite */
-  --ovl:    30px;     /* Überlappung */
+  --ovl:    -30px;     /* Überlappung */
   --speed: 20s;       /* Durchlauf-Dauer */
 }
 
