@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   next.addEventListener('click', nextSlide);
   prev.addEventListener('click', prevSlide);
 
+  // Expose showSlide for testing purposes
+  window.showSlide = showSlide;
+
   showSlide(current);
   setInterval(nextSlide, 5000);
 });
