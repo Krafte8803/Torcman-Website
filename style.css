@@ -296,6 +296,15 @@ section h2 {
   font-style: normal;
   line-height: 1.6;
 }
+#kontakt .map-container {
+  margin-top: 1rem;
+  border: 1px solid var(--lightgrey);
+}
+#kontakt iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
 footer {
   background: var(--darkgrey);
   color: var(--white);
