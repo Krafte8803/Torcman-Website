@@ -346,3 +346,16 @@ footer a {
   color: var(--orange);
   text-decoration: none;
 }
+
+/* Detailansicht für einzelne Produktseiten */
+.product-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.product-detail img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 1rem;
+}
