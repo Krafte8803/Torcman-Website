@@ -12,7 +12,7 @@ prevBtn.addEventListener('click', () => {
   track.scrollBy({ left: -track.offsetWidth * 0.3, behavior: 'smooth' });
 });
 
-// Auf Maus-Exit die Auto-Animation wieder starten
+// Beim Verlassen des Carousels (mouseleave) Auto-Animation wieder starten
 track.addEventListener('mouseleave', () => {
   track.style.animationPlayState = 'running';
 });
