@@ -276,6 +276,36 @@ section h2 {
   }
 }
 
+/* 6a. Produkteseite Raster */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+}
+.product-grid .product-card {
+  width: var(--card-w);
+  flex: 0 0 auto;
+  background: var(--white);
+  border: 1px solid var(--lightgrey);
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.product-grid .product-card:hover {
+  transform: translateY(-6px);
+}
+
+.page-title {
+  font-family: 'Microgramma', sans-serif;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+}
+
 /* 7. Über uns */
 #ueber-uns {
   max-width: 800px;
