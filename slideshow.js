@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', () => {
+function initSlideshow() {
   const slides = document.querySelectorAll('.hero.slideshow .slide');
   const next = document.querySelector('.slideshow-nav .next');
   const prev = document.querySelector('.slideshow-nav .prev');
@@ -23,10 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   next.addEventListener('click', nextSlide);
   prev.addEventListener('click', prevSlide);
-
   // Expose showSlide for testing purposes
-  window.showSlide = showSlide;
+  if (typeof window !== 'undefined') {
+    window.showSlide = showSlide;
+  }
 
   showSlide(current);
   setInterval(nextSlide, 5000);
-});
+}
+
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', initSlideshow);
+}
+
+module.exports = { initSlideshow };
