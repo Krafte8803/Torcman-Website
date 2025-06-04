@@ -336,7 +336,7 @@ section h2 {
 #kontakt .map-container {
   margin-top: 1rem;
   border: 1px solid var(--lightgrey);
-  flex: 0 0 250px;
+  flex: 0 0 500px;
   margin-left: auto;
 }
 #kontakt iframe {
