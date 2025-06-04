@@ -49,8 +49,8 @@
 
 @font-face {
   font-family: 'Eurostile Candy';
-  src: url('fonts/eurostilecandylntpro-regular-webfont.woff2') format('woff2'),
-       url('fonts/eurostilecandylntpro-regular-webfont.woff')  format('woff'),
+  src: url('fonts/eurostilecandyltpro-regular-webfont.woff2') format('woff2'),
+       url('fonts/eurostilecandyltpro-regular-webfont.woff')  format('woff'),
        url('fonts/EurostileCandyLTPro-Regular.otf')           format('opentype');
   font-weight: 400;
   font-style: normal;
