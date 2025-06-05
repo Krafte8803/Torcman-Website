@@ -1,5 +1,6 @@
 <h1 class="page-title">Entwicklung</h1>
 <section class="product-detail">
+  <img src="../images/entwicklung.png" alt="Entwicklung">
   <h2>Deine Idee. Unsere Lösung. – Entwicklungskompetenz für Modell und Industrie</h2>
   <p>Ob Maßanfertigung für den Wettbewerbspiloten oder Sonderentwicklung für industrielle Anwendungen: Torcman entwickelt, was nicht von der Stange kommt. Unsere Stärke liegt im Verständnis komplexer Anforderungen – und der Fähigkeit, sie effizient in technische Lösungen zu übersetzen. Von der ersten Machbarkeitsanalyse über CAD-Entwürfe, Simulationen und Prototypen bis hin zur Serienfertigung in kleinen Stückzahlen bieten wir den kompletten Entwicklungszyklus.</p>
   <p>Dabei profitieren unsere Partner von kurzen Wegen, tiefem Anwendungsverständnis und der einzigartigen Kombination aus Modellflug-Know-how und industrieller Denkweise. Unsere Motoren kommen zum Einsatz in Schleifmaschinen, Drohnen, Generatoren, Forschungseinrichtungen und überall dort, wo maximale Effizienz auf minimalem Bauraum gefragt ist.</p>
