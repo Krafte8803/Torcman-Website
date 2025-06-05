@@ -373,3 +373,9 @@ footer a {
   height: auto;
   margin-bottom: 1rem;
 }
+
+/* Zentrische Textausrichtung fuer nachfolgende Abschnitte auf Produktseiten */
+.product-detail ~ section,
+.text-content {
+  text-align: center;
+}
