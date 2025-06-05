@@ -1,8 +1,8 @@
-
 function initSlideshow() {
   const slides = document.querySelectorAll('.hero.slideshow .slide');
   const next = document.querySelector('.slideshow-nav .next');
   const prev = document.querySelector('.slideshow-nav .prev');
+  if (!slides.length || !next || !prev) return;
   let current = 0;
 
   function showSlide(index) {
@@ -23,7 +23,7 @@ function initSlideshow() {
 
   next.addEventListener('click', nextSlide);
   prev.addEventListener('click', prevSlide);
-  // Expose showSlide for testing purposes
+
   if (typeof window !== 'undefined') {
     window.showSlide = showSlide;
   }
@@ -32,8 +32,6 @@ function initSlideshow() {
   setInterval(nextSlide, 5000);
 }
 
-if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', initSlideshow);
+if (typeof module !== 'undefined') {
+  module.exports = { initSlideshow };
 }
-
-module.exports = { initSlideshow };
