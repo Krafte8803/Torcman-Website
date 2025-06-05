@@ -7,9 +7,7 @@ function loadMarkdown() {
   fetch(`content/${file}.md`)
     .then(r => r.text())
     .then(md => {
-      let html = marked.parse(md);
-      html = html.replace(/\.\.\/images\//g, 'images/');
-      placeholder.innerHTML = html;
+      placeholder.innerHTML = marked.parse(md);
       if (window.initSlideshow) window.initSlideshow();
       if (window.initCarousel) window.initCarousel();
     })
