@@ -12,10 +12,9 @@ beforeEach(() => {
 });
 
 test('showSlide toggles active class on slides', () => {
-  // Import script which registers DOMContentLoaded listener
-  require('../slideshow.js');
-  // Trigger the listener
-  document.dispatchEvent(new Event('DOMContentLoaded'));
+  const { initSlideshow } = require('../slideshow.js');
+  // initialize after DOM is ready
+  initSlideshow();
 
   const slides = document.querySelectorAll('.hero.slideshow .slide');
   // initial call inside script sets first slide active
