@@ -1,5 +1,6 @@
 <h1 class="page-title">FES-Ex System</h1>
 <section class="product-detail">
+  <img src="../images/fes-ex-system.png" alt="FES-Ex System">
   <p>Innovative Front-Elektro-Startlösungen für Segelflugmodelle.</p>
   <p><strong>Innovation trifft Eleganz – Das klappbare Einziehtriebwerk für Großsegler</strong></p>
   <p>Mit dem FES-Ex System revolutioniert Torcman den elektrischen Eigenstart: Statt klassischer Faltpropeller, die im Luftstrom klappen, fährt der Propeller samt Antrieb kompakt in den Rumpf ein – und verschwindet nahezu vollständig im aerodynamischen Profil. Die Vorteile liegen auf der Hand: maximale Leistung im Steigflug, minimaler Luftwiderstand im Gleitflug und eine Integration, die sich optisch wie technisch perfekt ins Modell einfügt.</p>
