@@ -1,6 +1,5 @@
 <h1 class="page-title">Zubehör</h1>
 <section class="product-detail">
-  <img src="../images/zubehoer.png" alt="Zubehör">
   <p>Passgenaues Zubehör – von Luftschrauben bis Spezialkabeln.</p>
 </section>
 <section>

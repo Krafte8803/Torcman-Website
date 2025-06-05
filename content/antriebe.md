@@ -1,6 +1,5 @@
 <h1 class="page-title">Antriebe</h1>
 <section class="product-detail">
-  <img src="../images/antriebe.png" alt="Antriebe">
   <p>Leistungsstarke Außenläufer-Motoren für höchste Effizienz und Zuverlässigkeit.</p>
 </section>
 <section class="text-content">

@@ -1,6 +1,5 @@
 <h1 class="page-title">Fahrwerke</h1>
 <section class="product-detail">
-  <img src="../images/fahrwerke.png" alt="Fahrwerke">
   <h2>Sicher landen, sauber starten – Elektrische Fahrwerke mit System</h2>
   <p>
     Ein Fahrwerk entscheidet maßgeblich über sauberes Rollen, sichere Starts und weiche Landungen – und beeinflusst wesentlich Optik und Gewicht eines jeden Flugmodells. Bei Torcman setzen wir auf elektrische Einziehfahrwerke, die speziell für Großsegler und anspruchsvolle Scale-Modelle konzipiert sind.
