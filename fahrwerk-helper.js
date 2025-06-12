@@ -23,7 +23,11 @@ function initFahrwerkHelper() {
     const startgewicht = parseFloat(document.getElementById('startgewicht').value);
     const propellerZoll = parseFloat(document.getElementById('propeller').value);
     const propellerMm = propellerZoll * 25.4;
-    const passende = daten.filter(row => startgewicht < row.Startgewicht && propellerMm / 2 < (row.Hoehe || row.Höhe) - 50);
+    const passende = daten.filter(
+      row =>
+        startgewicht < row.Startgewicht &&
+        propellerMm / 2 < (row.Hoehe || row.Höhe) + (row.Rad || 0) / 2 - 50
+    );
     if (passende.length) {
       const unique = [...new Set(passende.map(x => x.Größe || x.Groesse))];
       result.innerHTML = '<b>Empfohlene Größen:</b><ul>' +
