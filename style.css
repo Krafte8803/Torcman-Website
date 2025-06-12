@@ -71,7 +71,7 @@ body {
 }
 
 /* Blocksatz für Fließtext */
-p {
+p, li, address {
   text-align: justify;
 }
 
@@ -146,7 +146,7 @@ nav a:hover {
   width: 80%;              /* 80% der Viewport-Breite */
   max-width: 800px;        /* mehr nicht, damit’s nicht zu breit wird */
   padding: 2rem;
-  text-align: center;
+  text-align: justify;
   background: none;
   color: var(--white);
 }
@@ -187,7 +187,7 @@ nav a:hover {
 /* 6. Produkte Carousel */
 section h2 {
   font-family: 'Microgramma', sans-serif;
-  text-align: center;
+  text-align: justify;
   margin-bottom: 1rem;
   font-size: 1.75rem;
 }
@@ -213,7 +213,7 @@ section h2 {
   border-radius: 6px;
   overflow: hidden;
   transition: transform 0.3s;
-  text-align: center;
+  text-align: justify;
 }
 .product-carousel .product-card:first-child {
   margin-left: 0;
@@ -297,7 +297,7 @@ section h2 {
   border: 1px solid var(--lightgrey);
   border-radius: 6px;
   overflow: hidden;
-  text-align: center;
+  text-align: justify;
   transition: transform 0.3s;
 }
 .product-grid .product-card:hover {
@@ -306,7 +306,7 @@ section h2 {
 
 .page-title {
   font-family: 'Microgramma', sans-serif;
-  text-align: center;
+  text-align: justify;
   margin: 2rem 0 1rem;
   font-size: 2rem;
 }
@@ -315,7 +315,7 @@ section h2 {
 #ueber-uns {
   max-width: 800px;
   margin: 0 auto 4rem;
-  text-align: center;
+  text-align: justify;
 }
 
 /* 8. Kontakt & Footer */
@@ -357,7 +357,7 @@ section h2 {
 footer {
   background: var(--darkgrey);
   color: var(--white);
-  text-align: center;
+  text-align: justify;
   padding: 1.5rem;
   font-size: 0.9rem;
 }
@@ -370,7 +370,7 @@ footer a {
 .product-detail {
   max-width: 800px;
   margin: 2rem auto;
-  text-align: center;
+  text-align: justify;
 }
 .product-detail img {
   width: 100%;
@@ -382,7 +382,7 @@ footer a {
 /* Zentrische Textausrichtung fuer nachfolgende Abschnitte auf Produktseiten */
 .product-detail ~ section,
 .text-content {
-  text-align: center;
+  text-align: justify;
 }
 
 /* Fahrwerksauswahl-Helfer */
