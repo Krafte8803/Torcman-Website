@@ -15,7 +15,6 @@
 </section>
 
 <section id="produkte" class="product-carousel">
-  <button class="carousel-btn prev" aria-label="Zurück">‹</button>
   <div class="carousel-track">
     <div class="product-card">
       <img src="../images/antriebe.png" alt="Antriebe">
@@ -78,7 +77,6 @@
       <a href="entwicklung.html" class="btn">Mehr erfahren</a>
     </div>
   </div>
-  <button class="carousel-btn next" aria-label="Weiter">›</button>
 </section>
 
 <section id="ueber-uns">
