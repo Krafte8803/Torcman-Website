@@ -12,6 +12,7 @@ function loadMarkdown() {
       placeholder.innerHTML = html;
       if (window.initSlideshow) window.initSlideshow();
       if (window.initCarousel) window.initCarousel();
+      if (window.initFahrwerkHelper) window.initFahrwerkHelper();
     })
     .catch(err => {
       placeholder.innerHTML = '<p>Inhalt konnte nicht geladen werden.</p>';

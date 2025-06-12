@@ -29,3 +29,19 @@
     Ein Fahrwerk ist nicht nur ein Bauteil – es ist dein Kontakt zur Welt. Mit <strong>FEMA by Torcman</strong> entscheidest du dich für Stabilität, Funktionalität und Modularität, die dein Modellflug-Erlebnis nachhaltig verbessern.
   </p>
 </section>
+
+<section class="fahrwerk-helper">
+  <h2>Fahrwerksauswahl-Helfer</h2>
+  <form id="auswahlForm">
+    <label>
+      Startgewicht (kg):
+      <input type="number" id="startgewicht" step="0.1" min="0" required>
+    </label>
+    <label>
+      Propellerdurchmesser (Zoll):
+      <input type="number" id="propeller" step="0.1" min="0" required>
+    </label>
+    <button type="submit" class="btn">Suchen</button>
+  </form>
+  <div class="result" id="ergebnis"></div>
+</section>

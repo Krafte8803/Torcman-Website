@@ -379,3 +379,21 @@ footer a {
 .text-content {
   text-align: center;
 }
+
+/* Fahrwerksauswahl-Helfer */
+.fahrwerk-helper {
+  max-width: 480px;
+  margin: 2rem auto;
+}
+.fahrwerk-helper label,
+.fahrwerk-helper input {
+  display: block;
+  margin: 0.5em 0;
+}
+.fahrwerk-helper .result {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
