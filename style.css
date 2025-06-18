@@ -1,61 +1,64 @@
-
 /* 1. CI-Farben */
 :root {
-  --white:     #FFFFFF;
-  --darkgrey:  #1A1A1A;
-  --lightgrey: #CCCCCC;
-  --orange:    #FFA200;
+  --white: #ffffff;
+  --darkgrey: #1a1a1a;
+  --lightgrey: #cccccc;
+  --orange: #ffa200;
 
   /* Variablen für Carousel */
-  --card-w: 220px;    /* Karten-Breite */
-  --ovl:    -30px;     /* Überlappung */
-  --speed: 20s;       /* Durchlauf-Dauer */
+  --card-w: 220px; /* Karten-Breite */
+  --ovl: -30px; /* Überlappung */
+  --speed: 20s; /* Durchlauf-Dauer */
 }
 
 /* 2. Webfonts */
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('fonts/dinpro-webfont.woff2') format('woff2'),
-       url('fonts/dinpro-webfont.woff')  format('woff'),
-       url('fonts/DINPro.otf')          format('opentype');
+  font-family: "DIN Pro";
+  src:
+    url("fonts/dinpro-webfont.woff2") format("woff2"),
+    url("fonts/dinpro-webfont.woff") format("woff"),
+    url("fonts/DINPro.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('fonts/dinpro-medium-webfont.woff2') format('woff2'),
-       url('fonts/dinpro-medium-webfont.woff')  format('woff'),
-       url('fonts/DINPro-Medium.otf')          format('opentype');
+  font-family: "DIN Pro";
+  src:
+    url("fonts/dinpro-medium-webfont.woff2") format("woff2"),
+    url("fonts/dinpro-medium-webfont.woff") format("woff"),
+    url("fonts/DINPro-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'DIN Pro';
-  src: url('fonts/dinpro-bold-webfont.woff2') format('woff2'),
-       url('fonts/dinpro-bold-webfont.woff')  format('woff'),
-       url('fonts/DINPro-Bold.otf')           format('opentype');
+  font-family: "DIN Pro";
+  src:
+    url("fonts/dinpro-bold-webfont.woff2") format("woff2"),
+    url("fonts/dinpro-bold-webfont.woff") format("woff"),
+    url("fonts/DINPro-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Microgramma';
-  src: url('fonts/microgrammaefop-boldext-webfont.woff2') format('woff2'),
-       url('fonts/microgrammaefop-boldext-webfont.woff')  format('woff'),
-       url('fonts/MicrogrammaEFOP-BoldExt.otf')           format('opentype');
+  font-family: "Microgramma";
+  src:
+    url("fonts/microgrammaefop-boldext-webfont.woff2") format("woff2"),
+    url("fonts/microgrammaefop-boldext-webfont.woff") format("woff"),
+    url("fonts/MicrogrammaEFOP-BoldExt.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Eurostile Candy';
-  src: url('fonts/eurostilecandyltpro-regular-webfont.woff2') format('woff2'),
-       url('fonts/eurostilecandyltpro-regular-webfont.woff')  format('woff'),
-       url('fonts/EurostileCandyLTPro-Regular.otf')           format('opentype');
+  font-family: "Eurostile Candy";
+  src:
+    url("fonts/eurostilecandyltpro-regular-webfont.woff2") format("woff2"),
+    url("fonts/eurostilecandyltpro-regular-webfont.woff") format("woff"),
+    url("fonts/EurostileCandyLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* 3. Reset & Basis */
 * {
@@ -64,14 +67,16 @@
   padding: 0;
 }
 body {
-  font-family: 'DIN Pro', sans-serif;
+  font-family: "DIN Pro", sans-serif;
   background: var(--white);
   color: var(--darkgrey);
   line-height: 1.6;
 }
 
 /* Blocksatz für Fließtext */
-p, li, address {
+p,
+li,
+address {
   text-align: justify;
 }
 
@@ -91,7 +96,7 @@ header .logo {
   height: 50px;
 }
 nav a {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   color: var(--darkgrey);
   text-decoration: none;
   margin-left: 1.5rem;
@@ -105,9 +110,9 @@ nav a:hover {
 /* 5. Hero Slideshow – responsiv und skalierend */
 .hero {
   position: relative;
-  width: 100vw;             /* volle Breite */
-  height: 100vh;            /* volle Höhe des Viewports */
-  min-height: 400px;        /* Mindesthöhe für sehr flache Bildschirme */
+  width: 100vw; /* volle Breite */
+  height: 100vh; /* volle Höhe des Viewports */
+  min-height: 400px; /* Mindesthöhe für sehr flache Bildschirme */
   overflow: hidden;
   color: var(--white);
 }
@@ -140,11 +145,12 @@ nav a:hover {
 /* Hero-Text als zentriertes Overlay */
 .hero.slideshow .hero-content {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;              /* 80% der Viewport-Breite */
-  max-width: 800px;        /* mehr nicht, damit’s nicht zu breit wird */
+  width: 80%; /* 80% der Viewport-Breite */
+  max-width: 800px; /* mehr nicht, damit’s nicht zu breit wird */
   padding: 2rem;
   text-align: justify;
   background: none;
@@ -153,13 +159,13 @@ nav a:hover {
 
 /* Skalierbare Schriftgrößen */
 .hero h1 {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   /* schrumpft auf mobilen Geräten, wächst auf großen Bildschirmen */
   font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 0.5rem;
 }
 .hero p {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
@@ -174,7 +180,7 @@ nav a:hover {
   z-index: 3;
 }
 .hero.slideshow .slideshow-nav button {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   color: var(--white);
   font-size: 2rem;
@@ -183,10 +189,9 @@ nav a:hover {
   border-radius: 4px;
 }
 
-
 /* 6. Produkte Carousel */
 section h2 {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   text-align: justify;
   margin-bottom: 1rem;
   font-size: 1.75rem;
@@ -227,7 +232,7 @@ section h2 {
   object-fit: cover;
 }
 .product-card h3 {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   margin: 0.75rem 0;
 }
 .product-card p {
@@ -241,7 +246,7 @@ section h2 {
   padding: 0.5rem 1.25rem;
   background: var(--orange);
   color: var(--white);
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   font-weight: 700;
   text-decoration: none;
   border-radius: 4px;
@@ -305,7 +310,7 @@ section h2 {
 }
 
 .page-title {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   text-align: justify;
   margin: 2rem 0 1rem;
   font-size: 2rem;
@@ -324,7 +329,7 @@ section h2 {
   padding: 2rem;
 }
 #kontakt h2 {
-  font-family: 'Microgramma', sans-serif;
+  font-family: "Microgramma", sans-serif;
   margin-bottom: 1rem;
 }
 #kontakt address {

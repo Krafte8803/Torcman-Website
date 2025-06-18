@@ -1,13 +1,13 @@
 function initSlideshow() {
-  const slides = document.querySelectorAll('.hero.slideshow .slide');
-  const next = document.querySelector('.slideshow-nav .next');
-  const prev = document.querySelector('.slideshow-nav .prev');
+  const slides = document.querySelectorAll(".hero.slideshow .slide");
+  const next = document.querySelector(".slideshow-nav .next");
+  const prev = document.querySelector(".slideshow-nav .prev");
   if (!slides.length || !next || !prev) return;
   let current = 0;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+      slide.classList.toggle("active", i === index);
     });
   }
 
@@ -21,10 +21,10 @@ function initSlideshow() {
     showSlide(current);
   }
 
-  next.addEventListener('click', nextSlide);
-  prev.addEventListener('click', prevSlide);
+  next.addEventListener("click", nextSlide);
+  prev.addEventListener("click", prevSlide);
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     window.showSlide = showSlide;
   }
 
@@ -32,6 +32,6 @@ function initSlideshow() {
   setInterval(nextSlide, 5000);
 }
 
-if (typeof module !== 'undefined') {
+if (typeof module !== "undefined") {
   module.exports = { initSlideshow };
 }
