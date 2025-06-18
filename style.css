@@ -402,3 +402,14 @@ footer a {
   border-radius: 8px;
   background: #fafafa;
 }
+
+/* Spezifische Anpassungen fuer die Fahrwerke-Seite */
+#fahrwerke-page .page-title {
+  text-align: center;
+}
+
+#fahrwerke-page .product-detail img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
